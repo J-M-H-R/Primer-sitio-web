@@ -1,0 +1,103 @@
+<!DOCTYPE html><!--indica versión de html-->
+<html lang="en" dir="ltr"><!--indica que todo lo que esta entre etiquetas es html-->
+
+<head>
+    <meta charset="utf-8"><!--indica que el conjunto de caracteres que usara el documento seran codificados con UTF-8-->
+
+    <title>Mas acerca de mi | Hoja de vida</title>
+    <link rel="icon" href="sources/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk:MORF@15&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilo_general.css">
+</head>
+
+<body>
+    <div class="contenedor_ventana" style="width: 100%; height: 100%;">
+        <ul>
+            <li>
+                <img src="sources/warning.jpeg" alt="advertencia" style="width: 100px;">
+            </li>
+            <li>
+                <h1 class="item_texto_resaltado">¡¡¡ADVERTENCIA!!!</h1>
+            </li>
+            <li>
+                <p>Debe ingresar a continuacion el texto correcto para la pagina <span id="span_nombre_pagina"
+                        class="item_texto_resaltado item_inline_block"></span> para
+                    que pueda cargar el codigo y se muestre bien.
+                </p>
+                <script>
+                    document.getElementById('span_nombre_pagina').innerText = document.title;
+                </script>
+            </li>
+            <li>
+                <h2>Codigo de la pagina:</h2>
+            </li>
+            <li>
+                <input id="input_contenido_cuerpo" type="text" style="width: 100%;">
+            </li>
+            <li>
+                <button type="button" onclick="document.getElementById('main_contenedor_cuerpo').innerHTML 
+        += document.getElementById('input_contenido_cuerpo').value;
+        this.parentElement.parentElement.parentElement.style.display = 'none'">Aceptar</button>
+            </li>
+        </ul>
+    </div>
+
+    <div id="contenedor_borde_pagina"></div>
+
+    <div id="contenedor_cuerpo_pagina">
+        <header>
+            <ul class="lista_horizontal">
+                <li>
+                    <img src="sources/logo_fondo.png" alt="logo" style="width: 80px; background-color: orange;"
+                        class="item_borde_redondeado">
+                </li>
+                <li>
+                    <a href="index.html"><button>inicio</button></a>
+                </li>
+                <li>
+                    <a href="acerca.html"><button>mas acerca de mi</button></a>
+                </li>
+                <li>
+                    <a href="comunicar.html"><button>comunicarse</button></a>
+                </li>
+                <li>
+                    <a href="trabajo.html"><button>mis trabajos</button></a>
+                </li>
+            </ul>
+        </header>
+
+        <main id="main_contenedor_cuerpo" class="item_linea_borde">
+            <!---->
+
+            <!---->
+        </main>
+
+        <footer>
+            <ul>
+                <li>
+                    <a href="trabajo.html"><button>mis trabajos</button></a>
+                </li>
+                <li>
+                    <a href="comunicar.html"><button>comunicarse</button></a>
+                </li>
+                <li>
+                    <a href="acerca.html"><button>mas acerca de mi</button></a>
+                </li>
+                <li>
+                    <a href="index.html"><button>inicio</button></a>
+                </li>
+                <li>
+                    <img src="sources/logo_fondo.png" alt="logo" style="width: 80px;background-color:midnightblue;"
+                        class="item_borde_redondeado">
+                    <img src="sources/stock_icono.jpg" alt="decoracion" style="width: 80px;">
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>
